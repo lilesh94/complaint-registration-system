@@ -1,0 +1,61 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="station.master.cs" Inherits="MyOnlineComplaints.station" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+<link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+    <div id="container">
+  <div id="header" align="center"> <a href="default.aspx"><img src="Assets/logo.jpg" /></a> </div>
+      
+      
+  <div id="menu"> <a href="home.aspx">HOME</a> &nbsp; &nbsp; &nbsp; &nbsp; <a href="emergency.aspx">EMERGENCY NUMBERS</a> &nbsp; &nbsp; &nbsp; &nbsp; <a href="wanted.aspx">WANTED LIST</a> &nbsp; &nbsp; &nbsp; &nbsp; <a href="disclaimer.aspx">DISCLAIMER</a>  <span style="float:right;"> <a href="logout.aspx">LOG OUT</a>
+      &nbsp; &nbsp;</span></div>
+        
+  <div id="sidebar">
+   <div id="sidebar-content">
+   <div align="center"> <h1>Welcome,<br />
+        <%= Session["username"].ToString() %> 
+       </h1>    
+      </div>
+      <br />
+      <div align="center"> 
+          <p>
+                <!--User first Name here-->
+             
+   </p></div>
+      
+    
+      <br />
+      <br />
+      <ul>
+          <li><a href="stn-profile.aspx">Profile</a></li>
+          <li><a href="solve-complaints.aspx">Complaints</a></li>
+          <li><a href="complaint-status.aspx">Complaint Status</a></li>
+          <li><a href="add-wanted.aspx">Submit Wanted</a></li>
+          <li><a href="prev-history.aspx">Previous Complaints</a></li>
+      </ul>
+         </div>
+  </div>
+  <div id="main">
+      
+  <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+            <p style="height: 225px; margin-left: 148px">
+                &nbsp;</p>
+        
+        </asp:ContentPlaceHolder>
+  
+  </div>
+  <div id="footer"> &copy;2016 My Online Complaints &nbsp;<span class="separator">|</span>&nbsp; A Project By: Lilesh Moolya &nbsp; </div>
+</div>
+</body>
+</html>
